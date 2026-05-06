@@ -61,3 +61,9 @@ foreach ($pathPattern in $knownPaths) {
 mix test
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-rivet-move-tactic-detail.ps1
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-rivet-move-tactic-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-rivet-move-tactic-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

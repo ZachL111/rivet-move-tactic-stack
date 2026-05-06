@@ -1,0 +1,17 @@
+{
+  "repo": "rivet-move-tactic-stack",
+  "thresholds": {
+    "signal": 4,
+    "slack": 2,
+    "confidence": 1,
+    "drag": 4,
+    "ship": 195,
+    "watch": 113
+  },
+  "terms": [
+    "position pressure",
+    "move ordering",
+    "search width",
+    "endgame risk"
+  ]
+}
