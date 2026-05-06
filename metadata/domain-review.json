@@ -1,0 +1,73 @@
+{
+  "repo": "rivet-move-tactic-stack",
+  "language": "Elixir",
+  "category": "Chess and game engines",
+  "goal": "Build an Elixir toolkit that studies tactic behavior through framed sample traffic, with bounds and ordering tests and explicit failure cases.",
+  "review_model": {
+    "terms": [
+      "position pressure",
+      "move ordering",
+      "search width",
+      "endgame risk"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "position pressure",
+      "signal": 55,
+      "slack": 27,
+      "drag": 29,
+      "confidence": 67,
+      "score": 117,
+      "lane": "watch"
+    },
+    {
+      "name": "stress",
+      "focus": "move ordering",
+      "signal": 80,
+      "slack": 51,
+      "drag": 27,
+      "confidence": 75,
+      "score": 205,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "search width",
+      "signal": 55,
+      "slack": 35,
+      "drag": 28,
+      "confidence": 65,
+      "score": 126,
+      "lane": "watch"
+    },
+    {
+      "name": "recovery",
+      "focus": "endgame risk",
+      "signal": 86,
+      "slack": 23,
+      "drag": 21,
+      "confidence": 50,
+      "score": 182,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "position pressure",
+      "signal": 77,
+      "slack": 48,
+      "drag": 12,
+      "confidence": 71,
+      "score": 237,
+      "lane": "ship"
+    }
+  ]
+}

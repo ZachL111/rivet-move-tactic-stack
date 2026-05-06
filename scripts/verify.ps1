@@ -59,3 +59,5 @@ foreach ($pathPattern in $knownPaths) {
 }
 
 mix test
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-rivet-move-tactic-detail.ps1
