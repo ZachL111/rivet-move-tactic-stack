@@ -1,0 +1,32 @@
+{
+  "index": 233,
+  "phase": 2,
+  "batch": 26,
+  "name": "rivet-move-tactic-stack",
+  "planned_name": "rivet-move-tactic-stack",
+  "language": "Elixir",
+  "category": "Chess and game engines",
+  "goal": "Build an Elixir toolkit that studies tactic behavior through framed sample traffic, with bounds and ordering tests and explicit failure cases.",
+  "repository_url": "https://github.com/ZachL111/rivet-move-tactic-stack",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 172,
+    "risk_penalty": 5,
+    "latency_penalty": 3,
+    "weight_bonus": 2,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}

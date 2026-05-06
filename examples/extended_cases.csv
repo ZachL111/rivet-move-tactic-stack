@@ -1,0 +1,7 @@
+name,demand,capacity,latency,risk,weight,score,decision,reason
+baseline,65,83,20,10,7,117,review,chess and game engines baseline scenario exercises the review path for bounded failure handling
+pressure,84,74,25,22,9,75,review,chess and game engines pressure scenario exercises the review path for bounded failure handling
+surge,108,93,23,12,11,202,accept,chess and game engines surge scenario keeps the local fixture within the modeled acceptance band
+degraded,73,58,37,25,6,-20,review,chess and game engines degraded scenario exercises the review path for bounded failure handling
+recovery,90,109,21,12,11,188,accept,chess and game engines recovery scenario keeps the local fixture within the modeled acceptance band
+boundary,78,83,21,19,7,95,review,chess and game engines boundary scenario exercises the review path for bounded failure handling
